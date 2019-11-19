@@ -1,0 +1,191 @@
+{% extends 'Eapp/header.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <title>A2Z a Corporate Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+                <!-- for-mobile-apps -->
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta name="keywords" content="a2z Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+                <script> 
+                        addEventListener("load", function () {
+                                setTimeout(hideURLbar, 0);
+                        }, false);
+        
+                        function hideURLbar() {
+                                window.scrollTo(0, 1);
+                        }
+                </script>
+                <!-- //for-mobile-apps -->
+                <link href="{% static '/Eapp/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+                <!--banner slider  -->
+                <link href="{% static '/Eapp/css/JiSlider.css' %}" rel="stylesheet">
+                <!-- //banner-slider -->
+                <link href="{% static '/Eapp/css/font-awesome.css' %}" rel="stylesheet" type="text/css" media="all" />
+                <link href="{% static '/Eapp/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+                <link href="{% static '//fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i' %}" rel="stylesheet">
+                <link href="{% static '//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i' %}" rel="stylesheet">
+        
+        </head>
+<body>
+                {% block content %}
+                <!-- <div class="banner-btm"> -->
+                                <div class="container">
+                                        <div class="banner-bottom-main">
+                                                <div class="col-md-4 banner-btmg1">
+        
+                                                        <div class="form-text">
+                                                                <h3>Looking for a Handyman?</h3>
+                                                                <p>We solve your Home repair needs!</p>
+                                                                <img src="{% static '/Eapp/images/f1.png' %}" alt="" />
+                                                        </div>
+                                                        <form action="{% url 'rig' %}" method="post" class="banner_form">
+                                                                {% csrf_token %}
+                                                                        <div class="form-select sec-right">
+                                                                                        <label class="contact-form-text">Select Role</label>
+                                                                                        <select name="role">
+                                                                                                <option value="0">---- SELECT ----</option>
+                                                                                                <option value="ServiceMan">ServiceMan</option>
+                                                                                                <option value="Customer">Customer</option>
+                                                                                        </select>
+                                                                                </div>
+                                                                <div class="sec-left">
+
+                                                                        <label class="contact-form-text">Name</label>
+                                                                        <input placeholder="Name " name="firstname" type="text" required="">
+                                                                </div>
+                                                                <div class="sec-right">
+                                                                        <label class="contact-form-text">Email</label>
+                                                                        <input placeholder="Email " name="email" type="email" required="">
+                                                                </div>
+                                                                <div class="sec-left">
+                                                                        <label class="contact-form-text">Password</label>
+                                                                        <input placeholder="Password" name="password" type="password" required="" class="form-control">
+                                                                </div>
+
+                                                                <div class="sec-left">
+                                                                        <label class="contact-form-text">Mobile no.</label>
+                                                                        <input placeholder=" phonenumber" name="num" type="text" required="">
+                                                                </div>
+                                                                <div class="form-tx">
+                                                                        <label class="contact-form-text">Address</label>
+                                                                        <textarea placeholder="your address" name="add" required=""></textarea>
+                                                                </div>
+                                                                
+                                                                <input type="submit" value="Submit">
+                                                        </form>
+                                                </div>
+                                                <div class="col-md-8 banner-btm-grid2">
+                                                        <div class="col-md-4 banner-grid2">
+                                                                <div class="banner-subg1">
+                                                                        <h3>maintenance</h3>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit estibulum nibh urna scing.</p>
+                                                                        <span class="fa fa-cog" aria-hidden="true"></span>
+                                                                        <div class="read-btn">
+                                                                                <a href="about.html">view more</a>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="banner-subg1">
+                                                                        <h3>cleaning</h3>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit estibulum nibh urna scing.</p>
+                                                                        <span class="fa fa-check-square-o" aria-hidden="true"></span>
+                                                                        <div class="read-btn">
+                                                                                <a href="about.html">view more</a>
+                                                                        </div>
+                                                                </div>
+        
+                                                        </div>
+                                                        <div class="col-md-4 banner-grid2">
+                                                                <div class="banner-subg1">
+                                                                        <h3>repair</h3>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit estibulum nibh urna scing.</p>
+                                                                        <span class="fa fa-yelp" aria-hidden="true"></span>
+                                                                        <div class="read-btn">
+                                                                                <a href="about.html">view more</a>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="banner-subg1">
+                                                                        <h3>improvement</h3>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit estibulum nibh urna scing.</p>
+                                                                        <span class="fa fa-gg" aria-hidden="true"></span>
+                                                                        <div class="read-btn">
+                                                                                <a href="about.html">view more</a>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                        </div>
+                                </div>
+                        </div>
+                        <!-- //banner bottom -->
+                        <!-- about -->
+                        <div class="agile-about-main">
+                                <div class="col-md-4 about-left">
+                                        <div class="about-main-bg text-center">
+                                                <h4 class="about-title">Why</h4>
+                                                <h4 class="sub">
+                                                        <span>c</span>hoose
+                                                        <span>u</span>s?</h4>
+                                        </div>
+                                </div>
+                                <div class="col-md-8 about-bottom-g1">
+                                        <h4>One Stop Solution for your Complete Home Maintenance</h4>
+                                        <!-- <h4>get easy home repairs and upgrades with professional home service providers</h4> your complete home solution.-->
+                                        <div class="about-grid">
+                                                <div class="about-bottom-right">
+                                                        <div class="abouthome-grid">
+                                                                <span class="hi-icon hi-icon-archive fa fa-check"> </span>
+                                                        </div>
+                                                        <div class="about-bottom">
+                                                                <h5>vision</h5>
+                                                                <p>Consectetur adipiscing elit estibulum nibh urna</p>
+                                                        </div>
+                                                        <div class="clearfix"> </div>
+                                                </div>
+                                                <div class="about-bottom-right">
+                                                        <div class="abouthome-grid">
+                                                                <span class="hi-icon hi-icon-archive  fa fa-book"> </span>
+                                                        </div>
+                                                        <div class="about-bottom">
+                                                                <h5>affordable</h5>
+                                                                <p>Elit consectetur adipiscing estibulum nibh urna</p>
+                                                        </div>
+                                                        <div class="clearfix"> </div>
+                                                </div>
+                                                <div class=" about-bottom-right">
+                                                        <div class="abouthome-grid">
+                                                                <span class="hi-icon hi-icon-archive fa fa-photo"> </span>
+                                                        </div>
+                                                        <div class="about-bottom">
+                                                                <h5>quality</h5>
+                                                                <p>Consectetur adipiscing elit estibulum nibh urna</p>
+                                                        </div>
+                                                        <div class="clearfix"> </div>
+                                                </div>
+                                                <div class=" about-bottom-right">
+                                                        <div class="abouthome-grid">
+                                                                <span class="hi-icon hi-icon-archive fa fa-briefcase"> </span>
+                                                        </div>
+                                                        <div class="about-bottom">
+                                                                <h5>24*7 support</h5>
+                                                                <p>Adipiscing consectetur elit estibulum nibh urna</p>
+                                                        </div>
+                                                        <div class="clearfix"> </div>
+                                                </div>
+                                        </div>
+                                        <div class="abt-img">
+                                                <img src="{% static '/Eapp/images/a1.png' %}" alt="" class="img-responsive" />
+                                        </div>
+                                        <div class="clearfix"></div>
+                                </div>
+        
+                                <div class="clearfix"></div>
+                        </div>
+                </div>
+
+                {% endblock %}
+</body>
+</html>

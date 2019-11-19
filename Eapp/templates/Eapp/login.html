@@ -1,0 +1,93 @@
+{% extends 'Eapp/header.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <title>A2Z a Corporate Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+                <!-- for-mobile-apps -->
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta name="keywords" content="a2z Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+                <script> 
+                        addEventListener("load", function () {
+                                setTimeout(hideURLbar, 0);
+                        }, false);
+        
+                        function hideURLbar() {
+                                window.scrollTo(0, 1);
+                        }
+                </script>
+                <!-- //for-mobile-apps -->
+                <link href="{% static '/Eapp/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+                <!--banner slider  -->
+                <link href="{% static '/Eapp/css/JiSlider.css' %}" rel="stylesheet">
+                <!-- //banner-slider -->
+                <link href="{% static '/Eapp/css/font-awesome.css' %}" rel="stylesheet" type="text/css" media="all" />
+                <link href="{% static '/Eapp/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+                <link href="{% static '//fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i' %}" rel="stylesheet">
+                <link href="{% static '//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i' %}" rel="stylesheet">
+        
+        </head>
+        
+<body>
+        {% block content %}
+        <div class=="container">
+        <div class="col-md-4 banner-btmg1">
+
+                <div class="form-text">
+                        <h3>Looking for a Handyman?</h3>
+                        <p>We solve your Home repair needs!</p>
+                        <img src="{% static '/Eapp/images/f1.png' %}" alt="" />
+                </div>
+                <form action="{% url 'logindata' %}" method="post" class="banner_form">
+                        {% csrf_token %}
+                                <div class="form-select sec-right">
+                                                <label class="contact-form-text">Select Role</label>
+                                                <select name="role">
+                                                        <option value="0">---- SELECT ----</option>
+                                                        <option>ServiceMan</option>
+                                                        <option>Customer</option>
+                                                        
+                                                </select>
+                                </div> 
+                                <!-- <div class="form-select sec-right">
+                                                <label class="contact-form-text">Select Service</label>
+                                        
+                                                <select class="form-control" name="role">
+                                                    <option class="hidden">---- SELECT ROLE----</option>
+                                                    <option>doctor</option>
+                                                    <option>patient</option>
+                                                </select>
+                                            </div> -->
+                        <div class="sec-left">
+                                <label class="contact-form-text">Email Id</label>
+                                <input placeholder="your Email " name="email" type="email" required="">
+                        </div>
+                        <div class="sec-right">
+                                <label class="contact-form-text">Password</label><br>
+                                <input placeholder="Password" name="password" type="password" required="" class="form-control">
+                        </div>
+                      
+                       
+                        
+                        <input type="submit" value="Submit" >
+                        <button style="width: 27%;
+                        text-transform: uppercase;
+                        outline: none;
+                        cursor: pointer;
+                        color: #031f9a;
+                        font-size: 1em;
+                        font-weight: 600;
+                        padding: 0.5em 0;
+                        letter-spacing: 1px;
+                        border: none;
+                        background: #febf00;
+                        margin-top: 20px;"><a href="{% url 'register2' %}">Registration</a></button> 
+                </form>
+        </div>
+</div>
+
+        {% endblock %}                
+</body>
+</html>
